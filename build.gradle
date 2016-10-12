@@ -17,6 +17,10 @@ plugins {
 
 description = "Shading gRPC"
 group 'com.kryptnostic'
+ext.projectName = "manhole"
+
+apply from: 'https://raw.githubusercontent.com/kryptnostic/gradles/master/kryptnostic.gradle'
+
 mainClassName = 'com.kryptnostic.manhole.SparkGrpcProto'
 sourceCompatibility=JavaVersion.VERSION_1_8
 targetCompatibility=JavaVersion.VERSION_1_8
@@ -49,6 +53,16 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    provided
+}
+
+sourceSets {
+    main.compileClasspath += configurations.provided
+    test.compileClasspath += configurations.provided
+    test.runtimeClasspath += configurations.provided
+}
+
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time
@@ -63,6 +77,10 @@ idea {
         sourceDirs += file("${projectDir}/src/generated/main/java");
         sourceDirs += file("${projectDir}/src/generated/main/grpc");
     }
+    ext.downloadSources = true
+    ext.downloadJavadoc = true
+    ext.sourceCompatibility = JavaVersion.VERSION_1_8
+    ext.targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 shadowJar {
