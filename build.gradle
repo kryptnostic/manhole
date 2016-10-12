@@ -17,7 +17,7 @@ plugins {
 
 description = "Shading gRPC"
 group 'com.kryptnostic'
-ext.projectName = "manhole"
+ext.projectName = "parasol"
 
 apply from: 'https://raw.githubusercontent.com/kryptnostic/gradles/master/kryptnostic.gradle'
 

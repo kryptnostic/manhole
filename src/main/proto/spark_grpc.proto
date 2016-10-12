@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-package manhole;
+package parasol;
 
 option java_multiple_files = true;
-option java_package = "com.kryptnostic.manhole";
+option java_package = "com.kryptnostic.parasol";
 option java_outer_classname = "SparkGrpcProto";
 
-service SparkManhole {
+service Parasol {
     // Sends a greeting
     rpc HelloNinja (HelloRequest) returns (HelloResponse) {}
 }

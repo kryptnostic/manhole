@@ -1,4 +1,4 @@
-package com.kryptnostic.manhole;
+package com.kryptnostic.parasol;
 
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
 import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
@@ -20,57 +20,57 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.0.1)",
     comments = "Source: spark_grpc.proto")
-public class SparkManholeGrpc {
+public class ParasolGrpc {
 
-  private SparkManholeGrpc() {}
+  private ParasolGrpc() {}
 
-  public static final String SERVICE_NAME = "manhole.SparkManhole";
+  public static final String SERVICE_NAME = "parasol.Parasol";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.kryptnostic.manhole.HelloRequest,
-      com.kryptnostic.manhole.HelloResponse> METHOD_HELLO_NINJA =
+  public static final io.grpc.MethodDescriptor<com.kryptnostic.parasol.HelloRequest,
+      com.kryptnostic.parasol.HelloResponse> METHOD_HELLO_NINJA =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "manhole.SparkManhole", "HelloNinja"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.kryptnostic.manhole.HelloRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.kryptnostic.manhole.HelloResponse.getDefaultInstance()));
+              "parasol.Parasol", "HelloNinja"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.kryptnostic.parasol.HelloRequest.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.kryptnostic.parasol.HelloResponse.getDefaultInstance()));
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static SparkManholeStub newStub(io.grpc.Channel channel) {
-    return new SparkManholeStub(channel);
+  public static ParasolStub newStub(io.grpc.Channel channel) {
+    return new ParasolStub(channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static SparkManholeBlockingStub newBlockingStub(
+  public static ParasolBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SparkManholeBlockingStub(channel);
+    return new ParasolBlockingStub(channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary and streaming output calls on the service
    */
-  public static SparkManholeFutureStub newFutureStub(
+  public static ParasolFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SparkManholeFutureStub(channel);
+    return new ParasolFutureStub(channel);
   }
 
   /**
    */
-  public static abstract class SparkManholeImplBase implements io.grpc.BindableService {
+  public static abstract class ParasolImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * Sends a greeting
      * </pre>
      */
-    public void helloNinja(com.kryptnostic.manhole.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.kryptnostic.manhole.HelloResponse> responseObserver) {
+    public void helloNinja(com.kryptnostic.parasol.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.kryptnostic.parasol.HelloResponse> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_HELLO_NINJA, responseObserver);
     }
 
@@ -80,8 +80,8 @@ public class SparkManholeGrpc {
             METHOD_HELLO_NINJA,
             asyncUnaryCall(
               new MethodHandlers<
-                com.kryptnostic.manhole.HelloRequest,
-                com.kryptnostic.manhole.HelloResponse>(
+                com.kryptnostic.parasol.HelloRequest,
+                com.kryptnostic.parasol.HelloResponse>(
                   this, METHODID_HELLO_NINJA)))
           .build();
     }
@@ -89,20 +89,20 @@ public class SparkManholeGrpc {
 
   /**
    */
-  public static final class SparkManholeStub extends io.grpc.stub.AbstractStub<SparkManholeStub> {
-    private SparkManholeStub(io.grpc.Channel channel) {
+  public static final class ParasolStub extends io.grpc.stub.AbstractStub<ParasolStub> {
+    private ParasolStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private SparkManholeStub(io.grpc.Channel channel,
+    private ParasolStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SparkManholeStub build(io.grpc.Channel channel,
+    protected ParasolStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new SparkManholeStub(channel, callOptions);
+      return new ParasolStub(channel, callOptions);
     }
 
     /**
@@ -110,8 +110,8 @@ public class SparkManholeGrpc {
      * Sends a greeting
      * </pre>
      */
-    public void helloNinja(com.kryptnostic.manhole.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.kryptnostic.manhole.HelloResponse> responseObserver) {
+    public void helloNinja(com.kryptnostic.parasol.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.kryptnostic.parasol.HelloResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_HELLO_NINJA, getCallOptions()), request, responseObserver);
     }
@@ -119,20 +119,20 @@ public class SparkManholeGrpc {
 
   /**
    */
-  public static final class SparkManholeBlockingStub extends io.grpc.stub.AbstractStub<SparkManholeBlockingStub> {
-    private SparkManholeBlockingStub(io.grpc.Channel channel) {
+  public static final class ParasolBlockingStub extends io.grpc.stub.AbstractStub<ParasolBlockingStub> {
+    private ParasolBlockingStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private SparkManholeBlockingStub(io.grpc.Channel channel,
+    private ParasolBlockingStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SparkManholeBlockingStub build(io.grpc.Channel channel,
+    protected ParasolBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new SparkManholeBlockingStub(channel, callOptions);
+      return new ParasolBlockingStub(channel, callOptions);
     }
 
     /**
@@ -140,7 +140,7 @@ public class SparkManholeGrpc {
      * Sends a greeting
      * </pre>
      */
-    public com.kryptnostic.manhole.HelloResponse helloNinja(com.kryptnostic.manhole.HelloRequest request) {
+    public com.kryptnostic.parasol.HelloResponse helloNinja(com.kryptnostic.parasol.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), METHOD_HELLO_NINJA, getCallOptions(), request);
     }
@@ -148,20 +148,20 @@ public class SparkManholeGrpc {
 
   /**
    */
-  public static final class SparkManholeFutureStub extends io.grpc.stub.AbstractStub<SparkManholeFutureStub> {
-    private SparkManholeFutureStub(io.grpc.Channel channel) {
+  public static final class ParasolFutureStub extends io.grpc.stub.AbstractStub<ParasolFutureStub> {
+    private ParasolFutureStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private SparkManholeFutureStub(io.grpc.Channel channel,
+    private ParasolFutureStub(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SparkManholeFutureStub build(io.grpc.Channel channel,
+    protected ParasolFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
-      return new SparkManholeFutureStub(channel, callOptions);
+      return new ParasolFutureStub(channel, callOptions);
     }
 
     /**
@@ -169,8 +169,8 @@ public class SparkManholeGrpc {
      * Sends a greeting
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.kryptnostic.manhole.HelloResponse> helloNinja(
-        com.kryptnostic.manhole.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.kryptnostic.parasol.HelloResponse> helloNinja(
+        com.kryptnostic.parasol.HelloRequest request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_HELLO_NINJA, getCallOptions()), request);
     }
@@ -183,10 +183,10 @@ public class SparkManholeGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SparkManholeImplBase serviceImpl;
+    private final ParasolImplBase serviceImpl;
     private final int methodId;
 
-    public MethodHandlers(SparkManholeImplBase serviceImpl, int methodId) {
+    public MethodHandlers(ParasolImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -196,8 +196,8 @@ public class SparkManholeGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_HELLO_NINJA:
-          serviceImpl.helloNinja((com.kryptnostic.manhole.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.kryptnostic.manhole.HelloResponse>) responseObserver);
+          serviceImpl.helloNinja((com.kryptnostic.parasol.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<com.kryptnostic.parasol.HelloResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
