@@ -86,6 +86,6 @@ idea {
 
 shadowJar {
     relocate 'io.netty', 'shadow.netty'
-    relocate 'com.google',"shadow.google"
+    relocate 'com.google.common',"shadow.google.common"
     baseName = 'shadow_grpc'
 }
