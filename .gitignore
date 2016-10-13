@@ -16,3 +16,5 @@ app.css.map
 /generated_src/
 *.iml
 target/
+*.ipr
+*.iws
