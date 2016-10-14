@@ -28,14 +28,14 @@ public class ParasolGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<com.kryptnostic.parasol.HelloRequest,
-      com.kryptnostic.parasol.HelloResponse> METHOD_HELLO_NINJA =
+  public static final io.grpc.MethodDescriptor<com.kryptnostic.parasol.GetEntitiesRequest,
+      com.kryptnostic.parasol.QueryResultBase> METHOD_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "parasol.Parasol", "HelloNinja"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.kryptnostic.parasol.HelloRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.kryptnostic.parasol.HelloResponse.getDefaultInstance()));
+              "parasol.Parasol", "GetAllEntitiesOfTypeOrEntitySet"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.kryptnostic.parasol.GetEntitiesRequest.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.kryptnostic.parasol.QueryResultBase.getDefaultInstance()));
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -65,24 +65,21 @@ public class ParasolGrpc {
   public static abstract class ParasolImplBase implements io.grpc.BindableService {
 
     /**
-     * <pre>
-     * Sends a greeting
-     * </pre>
      */
-    public void helloNinja(com.kryptnostic.parasol.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.kryptnostic.parasol.HelloResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_HELLO_NINJA, responseObserver);
+    public void getAllEntitiesOfTypeOrEntitySet(com.kryptnostic.parasol.GetEntitiesRequest request,
+        io.grpc.stub.StreamObserver<com.kryptnostic.parasol.QueryResultBase> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET, responseObserver);
     }
 
     @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            METHOD_HELLO_NINJA,
+            METHOD_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET,
             asyncUnaryCall(
               new MethodHandlers<
-                com.kryptnostic.parasol.HelloRequest,
-                com.kryptnostic.parasol.HelloResponse>(
-                  this, METHODID_HELLO_NINJA)))
+                com.kryptnostic.parasol.GetEntitiesRequest,
+                com.kryptnostic.parasol.QueryResultBase>(
+                  this, METHODID_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET)))
           .build();
     }
   }
@@ -106,14 +103,11 @@ public class ParasolGrpc {
     }
 
     /**
-     * <pre>
-     * Sends a greeting
-     * </pre>
      */
-    public void helloNinja(com.kryptnostic.parasol.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.kryptnostic.parasol.HelloResponse> responseObserver) {
+    public void getAllEntitiesOfTypeOrEntitySet(com.kryptnostic.parasol.GetEntitiesRequest request,
+        io.grpc.stub.StreamObserver<com.kryptnostic.parasol.QueryResultBase> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_HELLO_NINJA, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET, getCallOptions()), request, responseObserver);
     }
   }
 
@@ -136,13 +130,10 @@ public class ParasolGrpc {
     }
 
     /**
-     * <pre>
-     * Sends a greeting
-     * </pre>
      */
-    public com.kryptnostic.parasol.HelloResponse helloNinja(com.kryptnostic.parasol.HelloRequest request) {
+    public com.kryptnostic.parasol.QueryResultBase getAllEntitiesOfTypeOrEntitySet(com.kryptnostic.parasol.GetEntitiesRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_HELLO_NINJA, getCallOptions(), request);
+          getChannel(), METHOD_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET, getCallOptions(), request);
     }
   }
 
@@ -165,18 +156,15 @@ public class ParasolGrpc {
     }
 
     /**
-     * <pre>
-     * Sends a greeting
-     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.kryptnostic.parasol.HelloResponse> helloNinja(
-        com.kryptnostic.parasol.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.kryptnostic.parasol.QueryResultBase> getAllEntitiesOfTypeOrEntitySet(
+        com.kryptnostic.parasol.GetEntitiesRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_HELLO_NINJA, getCallOptions()), request);
+          getChannel().newCall(METHOD_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET, getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_HELLO_NINJA = 0;
+  private static final int METHODID_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET = 0;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -195,9 +183,9 @@ public class ParasolGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_HELLO_NINJA:
-          serviceImpl.helloNinja((com.kryptnostic.parasol.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.kryptnostic.parasol.HelloResponse>) responseObserver);
+        case METHODID_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET:
+          serviceImpl.getAllEntitiesOfTypeOrEntitySet((com.kryptnostic.parasol.GetEntitiesRequest) request,
+              (io.grpc.stub.StreamObserver<com.kryptnostic.parasol.QueryResultBase>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -217,7 +205,7 @@ public class ParasolGrpc {
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     return new io.grpc.ServiceDescriptor(SERVICE_NAME,
-        METHOD_HELLO_NINJA);
+        METHOD_GET_ALL_ENTITIES_OF_TYPE_OR_ENTITY_SET);
   }
 
 }
