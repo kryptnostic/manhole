@@ -8,7 +8,6 @@ option java_outer_classname = "SparkGrpcProto";
 
 service Parasol {
     rpc GetAllEntitiesOfTypeOrEntitySet (GetEntitiesRequest) returns (QueryResultBase) {}
-    //rpc GetAllEntitiesOfEntitySet (GetEntitySetRequest) returns (QueryResultBase) {}
 }
 
 // The requst message containing the entity's FullQualifiedName and EntitySet name
