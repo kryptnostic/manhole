@@ -52,6 +52,13 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
     mavenCentral()
+    mavenLocal()
+    maven {
+        url 'http://artifactory.krypt.int/artifactory/libs-snapshot/'
+    }
+    maven {
+        url 'http://artifactory.krypt.int/artifactory/remote-repos/'
+    }
 }
 
 configurations {
@@ -88,4 +95,8 @@ shadowJar {
     relocate 'io.netty', 'shadow.netty'
     relocate 'com.google.common',"shadow.google.common"
     baseName = 'parasol-shadow'
+}
+
+install {
+    configuration = configurations.published
 }
