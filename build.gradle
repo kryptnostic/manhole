@@ -20,6 +20,7 @@ ext.projectName = "parasol"
 ext.parasol_version='0.0.0'
 
 apply from: 'https://raw.githubusercontent.com/kryptnostic/gradles/master/kryptnostic.gradle'
+apply from: "https://raw.githubusercontent.com/kryptnostic/gradles/master/publishShadow.gradle"
 
 sourceCompatibility=JavaVersion.VERSION_1_8
 targetCompatibility=JavaVersion.VERSION_1_8
@@ -79,3 +80,4 @@ shadowJar {
     relocate 'com.google.common',"shadow.google.common"
     baseName = 'parasol-shadow'
 }
+
