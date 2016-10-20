@@ -15,15 +15,15 @@ public final class SparkGrpcProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_parasol_HelloRequest_descriptor;
+    internal_static_parasol_GetEntitiesRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_parasol_HelloRequest_fieldAccessorTable;
+      internal_static_parasol_GetEntitiesRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_parasol_HelloResponse_descriptor;
+    internal_static_parasol_QueryResultBase_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_parasol_HelloResponse_fieldAccessorTable;
+      internal_static_parasol_QueryResultBase_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,12 +33,16 @@ public final class SparkGrpcProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020spark_grpc.proto\022\007parasol\"\034\n\014HelloRequ" +
-      "est\022\014\n\004name\030\001 \001(\t\" \n\rHelloResponse\022\017\n\007me" +
-      "ssage\030\001 \001(\t2H\n\007Parasol\022=\n\nHelloNinja\022\025.p" +
-      "arasol.HelloRequest\032\026.parasol.HelloRespo" +
-      "nse\"\000B+\n\027com.kryptnostic.parasolB\016SparkG" +
-      "rpcProtoP\001b\006proto3"
+      "\n\020spark_grpc.proto\022\007parasol\"N\n\022GetEntiti" +
+      "esRequest\022\021\n\tnamespace\030\001 \001(\t\022\014\n\004name\030\002 \001" +
+      "(\t\022\027\n\017entity_set_name\030\003 \001(\t\"g\n\017QueryResu" +
+      "ltBase\022\020\n\010keyspace\030\001 \001(\t\022\022\n\ntable_name\030\002" +
+      " \001(\t\022\032\n\022query_id_as_string\030\003 \001(\t\022\022\n\nsess" +
+      "ion_id\030\004 \001(\t2e\n\007Parasol\022Z\n\037GetAllEntitie" +
+      "sOfTypeOrEntitySet\022\033.parasol.GetEntities" +
+      "Request\032\030.parasol.QueryResultBase\"\000B+\n\027c" +
+      "om.kryptnostic.parasolB\016SparkGrpcProtoP\001" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -52,18 +56,18 @@ public final class SparkGrpcProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_parasol_HelloRequest_descriptor =
+    internal_static_parasol_GetEntitiesRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_parasol_HelloRequest_fieldAccessorTable = new
+    internal_static_parasol_GetEntitiesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_parasol_HelloRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_parasol_HelloResponse_descriptor =
+        internal_static_parasol_GetEntitiesRequest_descriptor,
+        new java.lang.String[] { "Namespace", "Name", "EntitySetName", });
+    internal_static_parasol_QueryResultBase_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_parasol_HelloResponse_fieldAccessorTable = new
+    internal_static_parasol_QueryResultBase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_parasol_HelloResponse_descriptor,
-        new java.lang.String[] { "Message", });
+        internal_static_parasol_QueryResultBase_descriptor,
+        new java.lang.String[] { "Keyspace", "TableName", "QueryIdAsString", "SessionId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

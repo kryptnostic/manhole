@@ -10,7 +10,6 @@ buildscript {
 plugins {
     id "com.google.protobuf" version "0.8.0"
     id "java"
-    id "application"
     id "idea"
     id 'com.github.johnrengelman.shadow' version '1.2.3'
 }
@@ -22,7 +21,6 @@ ext.parasol_version='0.0.0'
 
 apply from: 'https://raw.githubusercontent.com/kryptnostic/gradles/master/kryptnostic.gradle'
 
-mainClassName = 'com.kryptnostic.manhole.SparkGrpcProto'
 sourceCompatibility=JavaVersion.VERSION_1_8
 targetCompatibility=JavaVersion.VERSION_1_8
 
@@ -44,14 +42,6 @@ protobuf {
         }
     }
     generatedFilesBaseDir = "$projectDir/src/generated"
-}
-
-
-repositories {
-    // Use 'jcenter' for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
-    mavenCentral()
 }
 
 configurations {
@@ -87,5 +77,5 @@ idea {
 shadowJar {
     relocate 'io.netty', 'shadow.netty'
     relocate 'com.google.common',"shadow.google.common"
-    baseName = 'shadow_grpc'
+    baseName = 'parasol-shadow'
 }

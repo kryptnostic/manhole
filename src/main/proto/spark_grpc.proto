@@ -7,16 +7,20 @@ option java_package = "com.kryptnostic.parasol";
 option java_outer_classname = "SparkGrpcProto";
 
 service Parasol {
-    // Sends a greeting
-    rpc HelloNinja (HelloRequest) returns (HelloResponse) {}
+    rpc GetAllEntitiesOfTypeOrEntitySet (GetEntitiesRequest) returns (QueryResultBase) {}
 }
 
-// The request message containing the user's name.
-message HelloRequest {
-    string name = 1;
+// The requst message containing the entity's FullQualifiedName and EntitySet name
+message GetEntitiesRequest{
+    string namespace = 1;
+    string name = 2;
+    string entity_set_name = 3;
 }
 
-// The response message containing the greetings
-message HelloResponse {
-    string message = 1;
+// The response message containing the QueryResult without Session
+message QueryResultBase{
+    string keyspace = 1;
+    string table_name = 2;
+    string query_id_as_string = 3;
+    string session_id = 4;
 }
