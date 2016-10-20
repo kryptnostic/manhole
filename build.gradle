@@ -10,7 +10,6 @@ buildscript {
 plugins {
     id "com.google.protobuf" version "0.8.0"
     id "java"
-    id "application"
     id "idea"
     id 'com.github.johnrengelman.shadow' version '1.2.3'
 }
@@ -22,7 +21,6 @@ ext.parasol_version='0.0.0'
 
 apply from: 'https://raw.githubusercontent.com/kryptnostic/gradles/master/kryptnostic.gradle'
 
-mainClassName = 'com.kryptnostic.manhole.SparkGrpcProto'
 sourceCompatibility=JavaVersion.VERSION_1_8
 targetCompatibility=JavaVersion.VERSION_1_8
 
