@@ -19,8 +19,7 @@ group 'com.kryptnostic'
 ext.projectName = "parasol"
 ext.parasol_version='0.0.0'
 
-apply from: 'https://raw.githubusercontent.com/kryptnostic/gradles/master/kryptnostic.gradle'
-apply from: "https://raw.githubusercontent.com/kryptnostic/gradles/master/publishShadow.gradle"
+apply from: 'https://raw.githubusercontent.com/kryptnostic/gradles/master/kryptnosticShadow.gradle'
 
 sourceCompatibility=JavaVersion.VERSION_1_8
 targetCompatibility=JavaVersion.VERSION_1_8
@@ -48,6 +47,7 @@ protobuf {
 configurations {
     provided
 }
+
 
 sourceSets {
     main.compileClasspath += configurations.provided
