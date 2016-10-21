@@ -79,5 +79,6 @@ shadowJar {
     relocate 'io.netty', 'shadow.netty'
     relocate 'com.google.common',"shadow.google.common"
     baseName = 'parasol-shadow'
+    classifier = 'shadow'
 }
 
